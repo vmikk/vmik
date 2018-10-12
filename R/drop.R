@@ -8,3 +8,7 @@ drop_NA_col <- function(df){
     res <- df[ , !colz ]
     return(res)
 }
+
+drop_zero <- function(x){
+    x[, which(colSums(x) > 0)]  
+}
