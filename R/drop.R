@@ -14,11 +14,12 @@ drop_mono <- function(x){
 
 # Delete columns that contain ONLY NAs
 drop_NA_col <- function(df){
-    colz <- apply(is.na(df), 2, all)
-    res <- df[ , !colz ]
-    return(res)
+  colz <- apply(is.na(df), 2, all)
+  res <- df[ , !colz ]
+  return(res)
 }
 
+# Remove species with zero abundance from community data
 drop_zero <- function(x){
-    x[, which(colSums(x) > 0)]  
+  x[, which(colSums(x) > 0)]  
 }
