@@ -1,5 +1,5 @@
 
-#' Erase monomorphic columns from data
+#' Erase monomorphic columns from the data
 #'
 #' @description Removes not varying variables (columns with same values) from data.
 #' @param x A data.frame or matrix.
@@ -19,7 +19,16 @@ drop_NA_col <- function(df){
   return(res)
 }
 
-# Remove species with zero abundance from community data
+#' Remove columns with zero sum from the data
+#'
+#' @description Removes columns that sum to zero.
+#' @param x A data.frame or matrix.
+#' @details This function can be used to remove species with zero abundance (i.e., species that are absent across all samples) from community data.
+#' @return data.frame or matrix without columns with zero sum.
+#' @examples
+#' datt <- data.frame(V1=0, V2=rnorm(50), V3=0, V4=rnorm(50))
+#' drop_zero(datt)
+#'
 drop_zero <- function(x){
   x[, which(colSums(x) > 0)]  
 }
