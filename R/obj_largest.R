@@ -1,3 +1,8 @@
+## TO DO:
+# - add size option (kilobytes / megabytes / ...)
+# - add option to choose environment? (not only global?)
+
+
 #' Find the largest objects in the workspace
 #'
 #' @description Determine what are the largest objects in the environment.
