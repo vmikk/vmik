@@ -1,4 +1,5 @@
 
+# Standardizing by сentering and вividing by 2 standard deviations
 gelman_scale <- function(x){
   x.obs <- x[!is.na(x)]
   mm <- mean(x.obs)
