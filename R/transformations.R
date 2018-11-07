@@ -12,3 +12,10 @@ gelman_scale <- function(x){
 IHS <- function(x){ 
   log(x + sqrt(x^2 + 1))
 }
+
+scale_to_interval <- function(x, limitMin = 0, limitMax = 1){
+  res <- (limitMax - limitMin) * (x - min(x))
+  res <- res / ( (max(x) - min(x)))
+  res <- res + limitMin
+  return(res)
+}
