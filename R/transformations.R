@@ -10,6 +10,7 @@ gelman_scale <- function(x){
   return(res)
 }
 
+# Inverse hyperbolic sine transformation
 IHS <- function(x){ 
   log(x + sqrt(x^2 + 1))
 }
