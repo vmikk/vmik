@@ -1,3 +1,6 @@
+## TO DO:
+# - IHS - add 'back' flag to perform reverse transformation
+
 
 # Standardizing by сentering and вividing by 2 standard deviations
 gelman_scale <- function(x){
