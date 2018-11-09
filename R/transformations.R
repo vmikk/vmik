@@ -31,6 +31,7 @@ IHS <- function(x){
 }
 
 
+# Scale numeric vector the specified interval.
 scale_to_interval <- function(x, limitMin = 0, limitMax = 1){
   res <- (limitMax - limitMin) * (x - min(x))
   res <- res / ( (max(x) - min(x)))
