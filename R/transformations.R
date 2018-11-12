@@ -31,7 +31,19 @@ IHS <- function(x){
 }
 
 
-# Scale numeric vector the specified interval.
+#' Scale numeric vector the specified interval
+#'
+#' @param x Numeric vector.
+#' @param limitMin Lower value of the interval (default = 0).
+#' @param limitMax Upper value of the interval (default = 1).
+#'
+#' @return Transformed values of \code{x} that belongs to the new range.
+#' @seealso scales::rescale
+#' @examples
+#' x <- 1:20
+#' scale_to_interval(x)
+#' scale_to_interval(x, 2, 5)
+#' 
 scale_to_interval <- function(x, limitMin = 0, limitMax = 1){
   res <- (limitMax - limitMin) * (x - min(x))
   res <- res / ( (max(x) - min(x)))
