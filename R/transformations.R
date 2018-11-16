@@ -1,6 +1,6 @@
 ## TO DO:
 # - IHS - add 'back' flag to perform reverse transformation
-
+# - gelman_scale - see also arm::rescale(, binary.inputs = "full")
 
 # Standardizing by сentering and вividing by 2 standard deviations
 gelman_scale <- function(x){
